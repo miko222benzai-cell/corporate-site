@@ -54,28 +54,28 @@ export interface IdealTrait {
 export const idealTraits: IdealTrait[] = [
   {
     number: "01",
-    title: "変化を楽しめる人",
-    description: "AIやSNSの変化を前向きに学び、試せる人。",
+    title: "変化を面白がれる人",
+    description: "AIやSNSの変化を前向きに学び、新しいことを試すのが好きな人。",
   },
   {
     number: "02",
-    title: "まず実行できる人",
-    description: "完璧を待たず、まず動き、改善できる人。",
+    title: "まず動いてみる人",
+    description: "完璧を待たず、まずやってみて改善を重ねられる人。",
   },
   {
     number: "03",
-    title: "素直に学べる人",
-    description: "経験よりも、吸収力と改善力を大切にできる人。",
+    title: "素直に吸収し続けられる人",
+    description: "経験の有無よりも、学び続ける姿勢を大切にできる人。",
   },
   {
     number: "04",
-    title: "数字と向き合える人",
+    title: "結果から学べる人",
     description:
-      "再生数、クリック率、登録数、応募数などの結果を見て改善できる人。",
+      "再生数、クリック率、登録数、応募数などを見ながら改善できる人。",
   },
   {
     number: "05",
     title: "関西から新しい仕事をつくりたい人",
-    description: "地方・関西からAI時代のキャリアをつくりたい人。",
+    description: "地方・関西から、AI時代の新しい仕事とキャリアをつくっていきたい人。",
   },
 ];

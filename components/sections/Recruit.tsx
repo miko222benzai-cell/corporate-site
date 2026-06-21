@@ -162,7 +162,7 @@ export default function Recruit() {
                    className="inline-flex items-center justify-center bg-white text-red-600
                               hover:bg-red-50 active:scale-95 font-black text-sm tracking-wide
                               px-8 py-4 transition-all duration-200 shadow-xl gap-3">
-                  職種を見る
+                  募集職種を見る
                   <span className="text-lg">→</span>
                 </a>
                 <a href="#contact"

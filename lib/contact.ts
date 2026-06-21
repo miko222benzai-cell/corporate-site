@@ -4,10 +4,10 @@
 // ──────────────────────────────────────────────────────────
 
 export const INQUIRY_TYPES = [
-  "サービス相談",
-  "見積もり",
-  "採用応募",
-  "タレント出演依頼",
+  "事業相談",
+  "採用について",
+  "取材・メディア掲載",
+  "タレント・クリエイター関連",
   "その他",
 ] as const;
 
@@ -17,7 +17,6 @@ export interface ContactPayload {
   name: string;
   company?: string;
   email: string;
-  phone?: string;
   inquiryType: InquiryType | "";
   message: string;
   /** honeypot：ボットだけが値を入れる隠しフィールド */
@@ -35,7 +34,6 @@ const MAX = {
   name: 100,
   company: 100,
   email: 254,
-  phone: 30,
   message: 5000,
 } as const;
 
@@ -61,7 +59,6 @@ export function validateContact(data: ContactPayload): ContactErrors {
 
   // 任意フィールドは上限チェックのみ
   if (data.company && data.company.length > MAX.company) e.form = "会社名が長すぎます";
-  if (data.phone && data.phone.length > MAX.phone) e.form = "電話番号が長すぎます";
 
   return e;
 }

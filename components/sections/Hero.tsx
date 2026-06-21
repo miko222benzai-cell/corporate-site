@@ -9,12 +9,9 @@ const ease = [0.22, 0.61, 0.36, 1] as const;
 export default function Hero() {
   return (
     <section id="top" className="relative bg-white overflow-hidden">
-      <div
-        className="relative flex"
-        style={{ minHeight: "min(780px, calc(100dvh - 80px))", paddingTop: "40px" }}
-      >
+      <div className="relative flex flex-col md:flex-row pt-6 md:pt-10 md:min-h-[min(780px,calc(100dvh-80px))]">
         {/* ── LEFT: Text ── */}
-        <div className="relative z-10 w-full lg:w-[54%] flex flex-col justify-center px-8 sm:px-12 lg:px-14 xl:px-16 py-6">
+        <div className="relative z-10 w-full md:w-[58%] lg:w-[54%] flex flex-col justify-center px-8 sm:px-12 lg:px-14 xl:px-16 py-6">
           {/* Label */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -101,12 +98,66 @@ export default function Hero() {
           </motion.div>
         </div>
 
+        {/* ── MOBILE: Visual card (below text, <768px) ── */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="md:hidden order-first w-full px-8 sm:px-12 mb-2"
+        >
+          <div className="relative flex h-[260px] max-[480px]:h-[210px] overflow-hidden">
+            {/* Red gradient panel */}
+            <div className="relative flex-[1] bg-gradient-to-br from-red-900 via-red-700 to-red-800 overflow-hidden">
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_90%_70%_at_60%_40%,rgba(255,90,90,0.45),transparent)]" />
+              <div
+                className="absolute inset-0 opacity-[0.12]"
+                style={{
+                  backgroundImage:
+                    "radial-gradient(circle, white 1.5px, transparent 1.5px)",
+                  backgroundSize: "26px 26px",
+                }}
+              />
+              <div className="absolute bg-white" style={{ width: "8px", height: "200%", top: "-50%", right: "-4%", transform: "rotate(-19deg)", opacity: 0.5 }} />
+              <div className="absolute bg-white" style={{ width: "3px", height: "200%", top: "-50%", right: "8%", transform: "rotate(-19deg)", opacity: 0.25 }} />
+            </div>
+
+            {/* Photo */}
+            <div className="relative flex-[1.6] overflow-hidden">
+              <Image
+                src="/hero-office.png"
+                alt="office"
+                fill
+                className="object-cover object-center grayscale"
+                sizes="60vw"
+              />
+              <div className="absolute inset-0 bg-black/25" />
+            </div>
+
+            {/* Red info card */}
+            <div className="relative flex-[1.1] bg-red-600 flex flex-col justify-end p-4 overflow-hidden">
+              <div className="absolute top-2 right-2 text-red-500 text-[56px] font-black leading-none opacity-25 select-none">
+                +
+              </div>
+              <p className="text-white font-black text-sm leading-[1.5] mb-1.5 relative z-10">
+                関西から、
+                <br />
+                AI時代の
+                <br />
+                マーケターを。
+              </p>
+              <p className="text-red-200 text-[9px] tracking-[0.16em] font-bold relative z-10">
+                ACCELERATE THE FUTURE.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
         {/* ── RIGHT: Photo grid ── */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.9, delay: 0.3 }}
-          className="hidden lg:block absolute right-0 top-0 w-[52%] h-full overflow-hidden"
+          className="hidden md:block absolute right-0 top-0 w-[46%] lg:w-[52%] h-full overflow-hidden"
           style={{ clipPath: "polygon(8% 0, 100% 0, 100% 100%, 0 100%)" }}
         >
           <div className="flex flex-col h-full">

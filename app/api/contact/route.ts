@@ -43,7 +43,6 @@ function buildEmailText(p: ContactPayload): string {
     `お名前: ${p.name}`,
     `会社名: ${p.company ?? "（未入力）"}`,
     `メール: ${p.email}`,
-    `電話番号: ${p.phone ?? "（未入力）"}`,
     `お問い合わせ種別: ${p.inquiryType}`,
     "",
     "── お問い合わせ内容 ──",

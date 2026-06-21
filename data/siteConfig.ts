@@ -18,7 +18,7 @@ export const siteConfig = {
     ceo: "坂東大毅",
     address: "〒520-0044 滋賀県大津市京町3-4-2 MORITA BUILDING 2F",
     address2: "〒556-0005 大阪府大阪市浪速区日本橋3-4-9 エグゼレジデンスタワー301",
-    email: "info@example.com",
+    email: "info@crazy.kansai",
     business: "AIコンサルティング、コンテンツ制作・運用、クリエイティブ制作",
     /**
      * Google Maps の埋め込みURL。

@@ -17,7 +17,6 @@ interface FormShape {
   name: string;
   company: string;
   email: string;
-  phone: string;
   inquiryType: InquiryType | "";
   message: string;
   /** honeypot：ユーザーには見えないがDOMには存在する */
@@ -28,7 +27,6 @@ const initialForm: FormShape = {
   name: "",
   company: "",
   email: "",
-  phone: "",
   inquiryType: "",
   message: "",
   website: "",
@@ -58,7 +56,6 @@ export default function Contact() {
       name: form.name,
       company: form.company || undefined,
       email: form.email,
-      phone: form.phone || undefined,
       inquiryType: form.inquiryType,
       message: form.message,
       website: form.website,
@@ -139,8 +136,7 @@ export default function Contact() {
           {/* 左カラム */}
           <FadeIn>
             <p className="text-red-100 text-base leading-[1.9] mb-10">
-              サービスのご相談、お見積り、採用についてなど、
-              お気軽にお問い合わせください。
+              事業のご相談、採用、取材・メディア掲載、タレント・クリエイター関連など、お気軽にお問い合わせください。
               <br />
               通常2営業日以内にご返信いたします。
             </p>
@@ -218,19 +214,6 @@ export default function Contact() {
                       autoComplete="email"
                       maxLength={254}
                       className={inputClass(!!errors.email)}
-                    />
-                  </Field>
-
-                  <Field label="電話番号">
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={form.phone}
-                      onChange={handleChange}
-                      placeholder="03-1234-5678"
-                      autoComplete="tel"
-                      maxLength={30}
-                      className={inputClass(false)}
                     />
                   </Field>
 
